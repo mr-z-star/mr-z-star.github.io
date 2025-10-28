@@ -1,0 +1,31 @@
+/* Preview styles based on screenshot layout */
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'InterLocal',Inter,Arial,sans-serif;color:#222}
+.header{position:fixed;top:0;left:0;right:0;background:#000;padding:12px 24px;z-index:1000}
+.nav{display:flex;justify-content:flex-start;align-items:center;max-width:1200px;margin:0 auto;position:relative}
+.nav-brand h1{color:#fff;font-size:20px}
+.nav-menu{display:flex;gap:28px;list-style:none}
+.nav-link{color:#fff;text-decoration:none;font-weight:700}
+.nav-link.active{color:#0db76b;border-bottom:4px solid #0db76b;padding-bottom:6px}
+
+.hero{min-height:86vh;display:flex;align-items:center;justify-content:center}
+.hero{min-height:92vh;display:flex;align-items:flex-start;justify-content:center;background:#fff}
+.hero-visual{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;align-items:center}
+.hero-logo{width:300px;margin-top:90px}
+.hero-title-stack{margin-top:22px;text-align:center}
+.hero-name{font-size:26px;letter-spacing:.12em;color:#222;font-weight:700}
+.hero-name{font-size:28px;letter-spacing:.14em;color:#222;font-weight:700}
+.hero-sub{font-family:'Courier New',Courier,monospace;font-size:16px;letter-spacing:.2em;margin-top:8px;color:#222}
+.hero-image{width:100%;max-height:360px;object-fit:cover;filter:grayscale(100%) contrast(95%);margin-top:24px}
+.hero-image{width:100%;max-height:300px;object-fit:cover;filter:grayscale(100%) contrast(95%);margin-top:40px}
+.stripes{margin-top:12px}
+.stripes{margin-top:18px}
+.stripe{height:36px}
+.stripe{height:42px}
+.stripe.dark{background:#222}
+.stripe.gray{background:#bfbfbf}
+.stripe.light{background:#efefef}
+
+@media(max-width:768px){.hero-logo{width:160px}.hero-image{max-height:240px}}
+@media(max-width:768px){.hero-logo{width:180px}.hero-image{max-height:220px}}
