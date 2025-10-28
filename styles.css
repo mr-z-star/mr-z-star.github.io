@@ -580,6 +580,39 @@ html {
     }
 }
 
+/* ==== Gentle global scale-down overrides ====
+     The site appeared visually too large on some viewports after merging styles.
+     These conservative overrides reduce base font-size and large component heights
+     while preserving the site's layout and responsive breakpoints.
+*/
+html, body {
+    /* reduce the root font-size slightly to make type and spacing smaller */
+    font-size: 15px; /* was implicit ~16px in many browsers */
+}
+
+/* reduce hero sizing */
+.hero { height: 50vh; min-height: 380px; }
+.hero-inner{max-width:680px;margin-left:28px;padding:28px}
+.hero h1{font-size:clamp(24px,4vw,48px)}
+
+/* shrink cards and thumbnails a bit */
+.cards{gap:14px}
+.card img{height:140px}
+.card h3{font-size:15px}
+
+.project-thumb{max-width:180px}
+
+/* contact card adjustments */
+.contact-card{padding:20px}
+.contact-card-left h2{font-size:22px}
+
+@media (max-width:900px){
+    html, body { font-size: 14.5px; }
+    .hero{height:44vh;min-height:320px}
+    .project-thumb{max-width:140px}
+}
+
+
 /* === Modern styles merged from modern.css (appended) ===
      These rules were appended to preserve the original theme in this single stylesheet.
      If you prefer to keep modern.css separate, revert by removing this block and restoring
